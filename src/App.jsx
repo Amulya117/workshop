@@ -4,18 +4,24 @@ import Hero from './components/Hero';
 import FeaturedProjects from './components/FeaturedProjects';
 import TechStackSkills from './components/TechStackSkills';
 import CampusJourney from './components/CampusJourney';
+import ContactSection from './components/ContactSection';
+import Footer from './components/Footer';
 import MatrixGridCanvas from './components/MatrixGridCanvas';
+import CursorGlow from './components/CursorGlow';
 
 function App() {
   return (
     <div className="relative min-h-screen bg-carbon-900 text-zinc-100 font-sans selection:bg-emerald-500/30 selection:text-emerald-300 overflow-x-hidden">
+      {/* Subtle Trailing Light Spark (Easter Egg Cursor Follower) */}
+      <CursorGlow />
+
       {/* Interactive Matrix Dot Grid Background Effect */}
       <MatrixGridCanvas />
 
       {/* Floating Frosted Glass Navbar */}
       <Navbar />
 
-      {/* Main Content */}
+      {/* Main Content Sections */}
       <main>
         {/* Intro Hero Screen */}
         <Hero />
@@ -29,12 +35,12 @@ function App() {
         {/* Education & Campus Journey Section */}
         <CampusJourney />
 
-        {/* Footer */}
-        <footer className="py-8 border-t border-emerald-500/10 text-center text-xs font-mono text-zinc-500">
-          <p>© {new Date().getFullYear()} Amulya G — Designed & Built with React & Tailwind CSS.</p>
-          <p className="mt-1 text-emerald-500/70">KS INSTITUTE OF TECHNOLOGY (CSE)</p>
-        </footer>
+        {/* Student-Friendly Contact Card with Magnetic Links */}
+        <ContactSection />
       </main>
+
+      {/* Clean Modern Footer */}
+      <Footer />
     </div>
   );
 }
